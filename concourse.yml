@@ -233,7 +233,14 @@ jobs:
                   mkdir /var/data/github
                   cd /var/data/github
 
+                  echo "Cloning recommender repo"
                   # Clone related links repository
+                  if [[ -z $GIT_CLONE_ARGS ]]; then
+                    echo "using: $GIT_CLONE_ARGS"
+                  else
+                    echo "using default branch"
+                  fi
+
                   git clone $GIT_CLONE_ARGS https://github.com/alphagov/govuk-related-links-recommender.git
                   cd govuk-related-links-recommender
 
