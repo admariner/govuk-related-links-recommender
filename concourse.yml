@@ -235,7 +235,7 @@ jobs:
 
                   echo "Cloning recommender repo"
                   # Clone related links repository
-                  if [[ -z $GIT_CLONE_ARGS ]]; then
+                  if [[ -z "$GIT_CLONE_ARGS" ]]; then
                     echo "using: $GIT_CLONE_ARGS"
                   else
                     echo "using default branch"
